@@ -23,7 +23,7 @@ class _Symbol:
         return self._text
 
 
-class Dictifier:
+class _Dictifier:
     """类转字典"""
 
     def dictify(self, *args):
@@ -42,7 +42,7 @@ class Dictifier:
         return dict_
 
 
-class Fetcher:
+class _Fetcher:
     def __init__(self):
         self.sess = requests.Session()
 

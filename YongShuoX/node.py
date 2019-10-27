@@ -9,10 +9,10 @@ from typing import List, Union, Optional
 import bs4
 from bs4 import BeautifulSoup as Souper
 
-from .base import _Symbol, Dictifier, Fetcher
+from .base import _Symbol, _Dictifier, _Fetcher
 
 
-class YSLocker(Dictifier):
+class YSLocker(_Dictifier):
     """认证类"""
 
     def __init__(self, client, password=None):
@@ -190,7 +190,7 @@ class YSNodeType:
     COMMENT = _Symbol()
 
 
-class YSNode(Dictifier):
+class YSNode(_Dictifier):
     """永硕基本节点"""
 
     def __init__(self, name, type_: _Symbol, label, core):
@@ -233,7 +233,7 @@ class YSIdNode(YSNode):
         return dict_
 
 
-class YSFriendLink(Dictifier):
+class YSFriendLink(_Dictifier):
     """永硕友情链接类"""
 
     def __init__(self, name, link):
@@ -621,7 +621,7 @@ class YS(YSMainFolder):
         """
         self.bucket = bucket
 
-        self.sess = Fetcher()
+        self.sess = _Fetcher()
         self.friend_links = []  # type: List[YSFriendLink] # 友链
         self.comments = []  # type: List[YSComment]  # 留言板
         self.token = ''  # API访问密钥
