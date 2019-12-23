@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: YongshuoX
+Version: 0.0.1.alpha
+Summary: 永硕网盘SDK
+Home-page: https://github.com/lqj679ssn/YongshuoSDK
+Author: Adel Liu
+Author-email: i@6-79.cn
+License: MIT Licence
+Description: 提供整套永硕网盘接口，包括资源读取、上传、编辑和删除
+Keywords: ys168,永硕,YongShuo
+Platform: any

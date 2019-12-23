@@ -14,6 +14,6 @@ setup(
     packages=find_packages(),
     install_requires=[
         'beautifulsoup4',
-        'requests',
+        'requests', 'smartify'
     ],
 )

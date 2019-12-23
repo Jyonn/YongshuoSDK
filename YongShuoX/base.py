@@ -3,6 +3,12 @@ from typing import Callable
 
 import requests
 from bs4 import BeautifulSoup as Souper
+from smartify import E
+
+
+@E.register()
+class YSError:
+    NOT_IMPLEMENTED = E("功能没有实现")
 
 
 class _Log:
@@ -42,7 +48,7 @@ class _Dictifier:
         return dict_
 
 
-class _Fetcher:
+class Fetcher:
     def __init__(self):
         self.sess = requests.Session()
 
